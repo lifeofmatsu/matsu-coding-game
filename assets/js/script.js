@@ -15,4 +15,3 @@ practiceEl.addEventListener('click', function() {
     window.location.href = 'practice.html';
 });
 
-

@@ -4,41 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/mainstyle.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/gamestyle.css"/>
+
+    <title>Coding Quiz Challenge</title>
 </head>
 
 <body>
     <header>
         <section class="container">
-            <div class="nav_grid">
-                <h1 class="title">CODING INTERVIEW GAME</h1>
-                <h1 class="title creator_name">matsu</h1>
+            <div class="nav-grid">
+                <h1 class="title">CODING PRACTICE FOR INTERVIEWS</h1>
+                <h1 class="title creator-name">matsu</h1>
             </div>
         </section>
     </header>
 
     <main>
         <section class="container">
-            <div class="game_container">
-                <div id="quiz"></div>
-                <button id="answerA"></button>
-                <button id="answerB"></button>
-                <button id="answerC"></button>
-                <button id="answerD"></button>
+            <h1>Coding Quiz Challenge</h1>
+            <div id="timer">Time: <span id="time"></span></div>
+            <div id="quiz-container">
+                <button id="start-quiz">Start Quiz</button>
+                <!-- Questions will be dynamically inserted here -->
             </div>
-            <div id="feedback" class="with_line"></div>
         </section>
     </main>
-
-    <footer>
-        <section class="container">
-            <h3><a id="leader" href="leader.html">View High Scores</a></h3>
-        </section>
-    </footer>
 
     <script src="./assets/js/game.js"></script>
 </body>
 
 </html>
+
