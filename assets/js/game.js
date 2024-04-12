@@ -57,10 +57,19 @@ const loadQuestion = (questionIndex) => {
     const questionObject = questionBank[questionIndex];
     const quizContainerEl = document.getElementById('quiz-container');
     quizContainerEl.innerHTML = `
-        <div class="question">${questionObject.question}</div>
-        <div class="choices">${Object.entries(questionObject.answerChoices).map(([key, choice]) => `<button onclick="checkAnswer('${key}')" class="choice">${choice}</button>`).join('')}</div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Question ${questionIndex + 1}</h5>
+                <p class="card-text">${questionObject.question}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                ${Object.entries(questionObject.answerChoices).map(([key, choice]) => 
+                    `<li class="list-group-item"><button onclick="checkAnswer('${key}')" class="btn btn-link">${choice}</button></li>`).join('')}
+            </ul>
+        </div>
     `;
 }
+
 
 //check user's answer choice for correctness
 const checkAnswer = (userAnswer) => {
@@ -120,7 +129,7 @@ const saveScore = (event) => {
     const newScore = {
         score: time,
         initials: initials
-    };  
+    };
 
     highScores.push(newScore);
     highScores.sort((a, b) => b.score - a.score); // Sort the scores in descending order
@@ -136,12 +145,4 @@ document.getElementById('time').textContent = time;
 document.addEventListener('DOMContentLoaded', (event) => {
     const startQuizEl = document.getElementById('start-quiz');
     startQuizEl.addEventListener('click', startQuiz);
-  });
-  
-
-
-// let leaderEl = document.querySelector('.leader');
-// event listener to redirect to leaderboard from game page
-// leaderEl.addEventListener('click', function() {
-//     window.location.href = 'leaderboard.html';
-// });
+});
