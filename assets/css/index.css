@@ -1,0 +1,123 @@
+:root {
+    /* CSS DARK THEME PRIMARY COLORS */
+    --color-primary-100: #673ab7;
+    --color-primary-200: #7a4fbf;
+    --color-primary-300: #8c64c8;
+    --color-primary-400: #9d79d0;
+    --color-primary-500: #ae8fd8;
+    --color-primary-600: #bfa5e0;
+    /** CSS DARK THEME SURFACE COLORS */
+    --color-surface-100: #121212;
+    --color-surface-200: #282828;
+    --color-surface-300: #3f3f3f;
+    --color-surface-400: #575757;
+    --color-surface-500: #717171;
+    --color-surface-600: #8b8b8b;
+    /** CSS DARK THEME MIXED SURFACE COLORS */
+    --color-surface-mixed-100: #1b1721;
+    --color-surface-mixed-200: #302c36;
+    --color-surface-mixed-300: #46434c;
+    --color-surface-mixed-400: #5e5b63;
+    --color-surface-mixed-500: #77747b;
+    --color-surface-mixed-600: #908e94;
+}
+
+body {
+    background-color: var(--color-surface-mixed-200);
+    color: var(--color-primary-600);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    font-family: 'Raleway', sans-serif;
+    padding: 10px 0;
+    background-color: var(--color-surface-mixed-100);
+}
+
+/* Header styles */
+header.navbar {
+    font-family: 'Raleway', sans-serif;
+    padding: 10px 0;
+    background-color: var(--color-surface-200);
+}
+
+/* Increased specificity for Bootstrap's navbar-brand and nav-link */
+header.navbar .navbar-brand #header-grid h1 {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+header.navbar .navbar-nav .nav-link {
+    font-weight: 400;
+    font-size: 1.2em;
+    color: var(--color-primary-600) !important; /* Ensuring override */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Transition for color and background */
+}
+
+/* Direct SVG styling within nav link */
+header.navbar .navbar-nav .nav-link svg {
+    fill: var(--color-primary-600) !important; /* SVG fill color */
+    transition: fill 0.3s; /* Transition for SVG fill */
+}
+
+/* Hover effects */
+header.navbar .navbar-nav .nav-link:hover,
+header.navbar .navbar-nav .nav-link:focus {
+    color: var(--color-primary-300) !important;
+    background-color: var(--color-surface-300);
+}
+
+/* Hover effects specifically for SVG */
+header.navbar .navbar-nav .nav-link:hover svg,
+header.navbar .navbar-nav .nav-link:focus svg {
+    fill: var(--color-primary-300) !important; /* Fill color change on hover/focus */
+}
+
+#header-container {
+    margin: auto auto;
+    width: 100%;
+}
+
+#header-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(5, max-content);
+    padding: 20px 40px 10px;
+}
+
+.hg-item1 {
+    grid-column: 1 / span 1;
+    place-self: center start;
+}
+
+.hg-item1 h1 {
+    color: var(--color-mixed-100);
+}
+
+a {
+    color: var(--color-primary-500);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-primary-400);
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+main h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}

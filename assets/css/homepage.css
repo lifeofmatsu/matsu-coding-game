@@ -1,0 +1,44 @@
+/* Buttons */
+.btn {
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+    color: var(--color-primary-600);
+    background-color: var(--color-surface-mixed-400);
+}
+
+.btn:hover {
+    color: var(--color-surface-mixed-100);
+    background-color: var(--color-surface-mixed-600);
+}
+
+.btn:active {
+    background-color: var(--color-surface-mixed-600);
+}
+
+#header-div {
+    background-color: var(--color-surface-200);
+}
+
+#header-div h1 {
+    font-size: 2em;
+}
+
+#play, #leader, #practice {
+    background-color: var(--color-primary-300);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#play:hover, #leader:hover, #practice:hover {
+    background-color: var(--color-primary-400);
+}
